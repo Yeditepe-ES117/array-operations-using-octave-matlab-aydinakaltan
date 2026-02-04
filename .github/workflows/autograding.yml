@@ -1,0 +1,14 @@
+name: Autograding
+on: [push]  # Triggers on code push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt update -y && sudo apt install -y octave
+      - name: Run tests
+        run: |
+          octave --no-gui --path ./tests/ --eval test_suite
+          

@@ -1,0 +1,9 @@
+{
+  "tests": [
+    {
+      "name": "Test",
+      "run": "octave --no-gui --path ./tests/ --eval test_suite", # test evaluation
+      "points": 100
+    }
+  ]
+}
